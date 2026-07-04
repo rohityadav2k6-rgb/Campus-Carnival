@@ -1,7 +1,7 @@
 Name: Rohit Yadav
 Enrollment: 0834CS241175
 Department: CSE
-Semester: 4
+Semester: 8
 Email: rohityadav2k6@gmail.com
 Phone: 9926002938
 Event: Code Sprint 2026
@@ -10,19 +10,19 @@ Ticket ID: CC2026-YHQ12K
 UTR: UTR715486139403
 =====================================
 
-Name: Rohit Yadav
-Enrollment: 0834CS241175
+Name: TUFFAND SINGH
+Enrollment: 0834CS241205
 Department: CSE
-Semester: 4
+Semester: 3
 Email: rohityadav2k6@gmail.com
-Phone: 9926002938
+Phone: 9999999999
 Event: Code Sprint 2026
 Message: 
 Ticket ID: CC2026-F6HLZD
 UTR: UTR715486139403
 =====================================
 
-Name: Rohit Yadav
+Name: Shivam Verma
 Enrollment: 0834CS241188
 Department: ECE
 Semester: 2
@@ -34,39 +34,4 @@ Ticket ID: CC2026-08OUMA
 UTR: UTR323890254457
 =====================================
 
-Name: Rohit
-Enrollment: 0834CS241175
-Department: CSE
-Semester: 2
-Email: rohityadav2k6@gmail.com
-Phone: 9926002938
-Event: Web Design Challenge
-Message: 
-Ticket ID: CC2026-QGGJ9Y
-UTR: UTR337358966743
-=====================================
-
-Name: Rohit
-Enrollment: 0834CS241175
-Department: CSE
-Semester: 2
-Email: rohityadav2k6@gmail.com
-Phone: 9926002938
-Event: Web Design Challenge
-Message: 
-Ticket ID: CC2026-VCZ4YF
-UTR: UTR337358966743
-=====================================
-
-Name: Rohit Yadav
-Enrollment: 0834CS241175
-Department: CSE
-Semester: 4
-Email: rohityadav2k6@gmail.com
-Phone: 9926002938
-Event: Web Design Challenge
-Message: 
-Ticket ID: CC2026-M54NHS
-UTR: UTR842658726555
-=====================================
 
