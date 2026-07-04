@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Campus Carnival</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+
+        <h1>Campus Carnival Events</h1>
+
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('events') }}">Events</a>
+            <a href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('admin') }}">Admin</a>
+        </nav>
+
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="page-intro">
+        <h2>Available Events</h2>
+
+        <p>
+            Select your favourite event and click Register Now.
+        </p>
+    </section>
+
+    <section class="card-grid">
+
+        <article class="card">
+
+            <h3>Quiz Master</h3>
+
+            <p><strong>Date:</strong> 2 July 2026</p>
+            <p><strong>Time:</strong> 01:00 PM</p>
+            <p><strong>Venue:</strong> Room 204</p>
+
+            <p>
+                Test your technical and general knowledge.
+            </p>
+
+            <a class="btn"
+               href="{{ url_for('register', event='Quiz Master') }}">
+                Register Now
+            </a>
+
+        </article>
+
+        <article class="card">
+
+            <h3>Quiz Master</h3>
+
+            <p><strong>Date:</strong> 2 July 2026</p>
+            <p><strong>Time:</strong> 01:00 PM</p>
+            <p><strong>Venue:</strong> Room 204</p>
+
+            <p>
+                Test your technical and general knowledge.
+            </p>
+
+            <a class="btn"
+               href="{{ url_for('register', event='Quiz Master') }}">
+                Register Now
+            </a>
+
+        </article>
+
+        <article class="card">
+
+            <h3>Code Sprint 2026</h3>
+
+            <p><strong>Date:</strong> 25 August 2026</p>
+            <p><strong>Time:</strong> 10:00 AM</p>
+            <p><strong>Venue:</strong> Computer Lab 1</p>
+
+            <p>
+                Programming competition based on coding and logical problem solving.
+            </p>
+
+            <a class="btn"
+               href="{{ url_for('register', event='Code Sprint 2026') }}">
+                Register Now
+            </a>
+
+        </article>
+
+        <article class="card">
+
+            <h3>Web Design Challenge</h3>
+
+            <p><strong>Date:</strong> 27 August 2026</p>
+            <p><strong>Time:</strong> 11:30 AM</p>
+            <p><strong>Venue:</strong> Seminar Hall</p>
+
+            <p>
+                Design creative and responsive websites.
+            </p>
+
+            <a class="btn"
+               href="{{ url_for('register', event='Web Design Challenge') }}">
+                Register Now
+            </a>
+
+        </article>
+        
+         <article class="card">
+
+            <h3>Sports Meet</h3>
+
+            <p><strong>Date:</strong> 8 September 2026</p>
+            <p><strong>Time:</strong> 08:00 AM</p>
+            <p><strong>Venue:</strong> College Ground</p>
+
+            <p>
+                Register for indoor and outdoor sports competitions.
+            </p>
+
+            <a class="btn"
+               href="{{ url_for('register', event='Sports Meet') }}">
+                Register Now
+            </a>
+
+        </article>
+
+        <article class="card">
+
+            <h3>Cultural Fiesta</h3>
+
+            <p><strong>Date:</strong> 5 October 2026</p>
+            <p><strong>Time:</strong> 04:00 PM</p>
+            <p><strong>Venue:</strong> Main Stage</p>
+
+            <p>
+                Participate in dance, singing and music competitions.
+            </p>
+
+            <a class="btn"
+               href="{{ url_for('register', event='Cultural Fiesta') }}">
+                Register Now
+            </a>
+
+        </article>
+
+        <article class="card coming-soon-card">
+
+                <h3>✨ More Events Coming Soon</h3>
+
+                <p>
+                    New technical, cultural and sports events will be added soon.
+                </p>
+
+                <p style="color:#0f4c75; font-weight:bold;">
+                    Stay tuned 🚀
+                </p>
+
+        </article>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 Campus Carnival. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

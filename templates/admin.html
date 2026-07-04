@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Campus Carnival</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container">
+
+<h1>Campus Carnival Admin Dashboard</h1>
+
+<nav class="navbar">
+
+<a href="{{ url_for('home') }}">Home</a>
+
+<a href="{{ url_for('events') }}">Events</a>
+
+<a href="{{ url_for('register') }}">Register</a>
+
+<a href="{{ url_for('admin') }}" class="active">Admin</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<main class="container">
+
+<section class="page-intro">
+
+<h2>Admin Dashboard</h2>
+
+<p>Manage all registered participants.</p>
+
+</section>
+
+<section class="card-grid">
+
+<div class="card">
+
+<h3>Total Participants</h3>
+
+<h1 class="counter" data-target="{{ total }}">0</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Code Sprint</h3>
+
+<h1 class="counter" data-target="{{ code_sprint }}">0</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Web Design</h3>
+
+<h1 class="counter" data-target="{{ web_design }}">0</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Quiz Master</h3>
+
+<h1 class="counter" data-target="{{ quiz_master }}">0</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Project Exhibition</h3>
+
+<h1 class="counter" data-target="{{ project_exhibition }}">0</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Cultural Fiesta</h3>
+
+<h1 class="counter" data-target="{{ cultural_fiesta }}">0</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Sports Meet</h3>
+
+<h1 class="counter" data-target="{{ sports_meet }}">0</h1>
+
+</div>
+
+</section>
+
+<br><br>
+
+<section class="table-section">
+
+<h2>Registered Participants</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>S.No</th>
+
+<th>Name</th>
+
+<th>Department</th>
+
+<th>Semester</th>
+
+<th>Event</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% if registrations %}
+
+{% for student in registrations %}
+
+<tr>
+
+<td>{{ loop.index }}</td>
+
+<td>{{ student.name }}</td>
+
+<td>{{ student.department }}</td>
+
+<td>{{ student.semester }}</td>
+
+<td>{{ student.event }}</td>
+
+</tr>
+
+{% endfor %}
+
+{% else %}
+
+<tr>
+
+<td colspan="5" style="text-align:center;">
+
+No Participants Registered Yet
+
+</td>
+
+</tr>
+
+{% endif %}
+
+</tbody>
+
+</table>
+
+</section>
+</main>
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p>&copy; 2026 Campus Carnival. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+
+<script>
+
+// Counter Animation
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+    const target = parseInt(counter.getAttribute("data-target")) || 0;
+
+    let count = 0;
+
+    const speed = Math.max(20, 1000 / Math.max(target, 1));
+
+    function updateCounter(){
+
+        if(count < target){
+
+            count++;
+
+            counter.innerText = count;
+
+            setTimeout(updateCounter, speed);
+
+        }
+        else{
+
+            counter.innerText = target;
+
+        }
+
+    }
+
+    updateCounter();
+
+});
+
+
+// Fade Animation on Cards
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card,index)=>{
+
+    card.style.opacity="0";
+
+    card.style.transform="translateY(30px)";
+
+    setTimeout(()=>{
+
+        card.style.transition="0.6s";
+
+        card.style.opacity="1";
+
+        card.style.transform="translateY(0px)";
+
+    },index*150);
+
+});
+
+
+// Table Animation
+
+const rows=document.querySelectorAll("tbody tr");
+
+rows.forEach((row,index)=>{
+
+    row.style.opacity="0";
+
+    row.style.transform="translateX(-20px)";
+
+    setTimeout(()=>{
+
+        row.style.transition="0.5s";
+
+        row.style.opacity="1";
+
+        row.style.transform="translateX(0px)";
+
+    },index*100);
+
+});
+
+</script>
+
+</body>
+
+</html>
