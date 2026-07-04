@@ -1,1 +1,55 @@
-
+Name: Rohit Yadav
+Enrollment: 0834CS241175
+Department: CSE
+Semester: 4
+Email: rohityadav@testgmail.com
+Phone: 9999999999
+Event: Code Sprint 2026
+Message: 
+Ticket ID: CC2026-X9VWOM
+UTR: UTR667228791819
+=====================================
+Name: Shivam Verma
+Enrollment: 0834CS241175
+Department: CSE
+Semester: 5
+Email: shiv@testgmail.com
+Phone: 9999999999
+Event: Web Design Challange
+Message: 
+Ticket ID: CC2026-X9VWOM
+UTR: UTR667228791819
+=====================================
+Name: Raj Singh
+Enrollment: 0834CS241162
+Department: CSE
+Semester: 4
+Email: rajsingh@testgmail.com
+Phone: 9999999999
+Event: Code Sprint 2026
+Message: 
+Ticket ID: CC2026-X9VWOM
+UTR: UTR667228791819
+=====================================
+Name: Tuffand Singh
+Enrollment: 0834CS241205
+Department: CSE
+Semester: 3
+Email: tufan@testgmail.com
+Phone: 9999999999
+Event: Quiz Master
+Message: 
+Ticket ID: CC2026-X9VWOM
+UTR: UTR667228791819
+=====================================
+Name: Raj & Neha
+Enrollment: 0834CS241162
+Department: CSE
+Semester: 4
+Email: raj@testgmail.com
+Phone: 9999999999
+Event: Couple Dance
+Message: 
+Ticket ID: CC2026-X9VWOM
+UTR: UTR667228791819
+=====================================
