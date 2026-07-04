@@ -1,20 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for
-from flask_mail import Mail, Message 
+# from flask_mail import Mail, Message 
 import os
 
 import random
 import string
 
 app = Flask(__name__)
-
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-
-app.config['MAIL_USERNAME'] = 'iamrohithere0@gmail.com'
-app.config['MAIL_PASSWORD'] = 'addb djck jfij vhlt'
-
-mail = Mail(app)
 
 # ===============================
 # File for storing registrations
@@ -238,45 +229,7 @@ def register():
         # ==========================
         # Email to Student
         # ==========================
-        msg = Message(
-            subject="Campus Carnival Registration Successful",
-            sender=app.config["MAIL_USERNAME"],
-            recipients=[student["email"]]
-        )
 
-        msg.body = f"""
-Hi {student['name']},
-
-Your registration for Campus Carnival has been completed successfully.
-
-==========================================
-Registration Details
-==========================================
-
-Name           : {student['name']}
-Enrollment No  : {student['enrollment']}
-Department     : {student['department']}
-Semester       : {student['semester']}
-Email          : {student['email']}
-Phone          : {student['phone']}
-
-Event          : {student['event']}
-Date           : {details.get('date')}
-Time           : {details.get('time')}
-Venue          : {details.get('venue')}
-
-Coordinator    : {details.get('coordinator')}
-Phone          : {details.get('phone')}
-Email          : {details.get('email')}
-
-==========================================
-
-Thank you for registering.
-
-Campus Carnival Team
-"""
-
-        mail.send(msg)
 
         # ==========================
         # Email to Admin
