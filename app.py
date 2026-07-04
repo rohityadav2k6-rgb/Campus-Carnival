@@ -230,44 +230,6 @@ def register():
         # Email to Student
         # ==========================
 
-
-        # ==========================
-        # Email to Admin
-        # ==========================
-        admin_msg = Message(
-            subject="🎉 New Campus Carnival Registration",
-            sender=app.config["MAIL_USERNAME"],
-            recipients=["iamrohithere0@gmail.com"]
-        )
-
-        admin_msg.body = f"""
-A new student has registered.
-
-==========================================
-STUDENT DETAILS
-==========================================
-
-Name            : {student['name']}
-Enrollment No   : {student['enrollment']}
-Department      : {student['department']}
-Semester        : {student['semester']}
-Email           : {student['email']}
-Phone           : {student['phone']}
-
-Event Name      : {student['event']}
-
-Coordinator     : {details.get('coordinator')}
-
-Student Message :
-{student['message'] if student['message'] else 'No Message'}
-
-==========================================
-Campus Carnival Portal
-==========================================
-"""
-
-        mail.send(admin_msg)
-
         return render_template(
         "success.html",
         name=student["name"],
